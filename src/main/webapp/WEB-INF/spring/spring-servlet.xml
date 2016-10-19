@@ -11,8 +11,9 @@
           http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+	<context:property-placeholder location="classpath:config.properties"/>
     <!-- 配置扫描的包 -->
-    <context:component-scan base-package="com.wechat.*" />
+    <context:component-scan base-package="com.wechat.shop.controller" />
 
     <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
     <mvc:annotation-driven />
@@ -26,5 +27,5 @@
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
-
+	<import resource = "spring-hibernate.xml"/>
 </beans>
