@@ -1,0 +1,44 @@
+
+Log2016/10/21
+
+
+1、没有eclipse环境，serialVersionUID都没有填写。
+
+2、@GenericGenerator(name = "wechat-shop-id", strategy = "uuid")，为什么选用uuid策略，name里面的名字是不是可以随便取名，主要是方便@GeneratedValue(generator = "wechat-shop-id")调用？
+
+3、
+    @Column(name = "CREATE_TIME", updatable = false)
+    private long createTime;
+
+    @Column(name = "LAST_MODIFY_TIME")
+    private long lastModifyTime;
+    
+    @Column(name = "IS_DELETED")
+    protected boolean isDeleted;
+	
+	为什么有些用private，有些用protected？
+	
+4、
+	@Column(name = "DELIVER_TIME")
+    long delivreTime;
+	
+	@Column(name = "COMPLETED_TIME")
+    long completedTime;
+	这两项在OrderModel（ORDER）和OrderDetailModel（ORDER_DETAIL）中都有出现。
+	
+5、CREATE TABLE `PRODUCT 中 `PARENT_ID` varchar(40) NOT NULL, 拼写错误？PARENT_ID->PATENT_ID
+
+6、CREATE TABLE `PRODUCT 中
+
+	`ATTRIBUTES_TEXT` longtext,
+  
+  
+	`ITEM_STATUS` varchar(20) DEFAULT NULL COMMENT 'ACTIVE, INACTIVE. ',
+	
+
+	`SEARCH_TERMS` mediumtext,
+	
+	这几项不懂什么意思。
+
+
+ 
