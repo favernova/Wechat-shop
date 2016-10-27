@@ -31,11 +31,11 @@ public class OrderDetailModel extends AbstractModel{
 	@Column(name = "ID", nullable = false, updatable = false)
 	String id;
 	
-	// @Column(name = "ORDER_ID")
-    // long orderId;	
+	@Column(name = "ORDER_ID")
+    long orderId;	
 	
-	// @Column(name = "PRODUCT_ID")
-    // String productId;	
+	@Column(name = "PRODUCT_ID")
+    String productId;	
 	
 	@Column(name = "QUANTITY")
     long quantity;	

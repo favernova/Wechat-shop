@@ -31,11 +31,11 @@ public class BuyingCarModel extends AbstractModel{
 	@Column(name = "ID", nullable = false, updatable = false)
 	String id;
 	
-	// @Column(name = "USER_ID")
-    // String orderId;
+	@Column(name = "USER_ID")
+    String orderId;
 	
-	// @Column(name = "PRODUCT_ID")
-    // String productId;
+	@Column(name = "PRODUCT_ID")
+    String productId;
 	
 	@Column(name = "QUANTITY")
     long quantity;

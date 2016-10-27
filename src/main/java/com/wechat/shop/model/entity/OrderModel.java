@@ -31,8 +31,8 @@ public class OrderModel extends AbstractModel{
 	@Column(name = "ID", nullable = false, updatable = false)
 	int id;
 	
-	// @Column(name = "USER_ID")
-    // String userId;
+	@Column(name = "USER_ID")
+    String userId;
 	
 	@Column(name = "STATUS")
     String status;

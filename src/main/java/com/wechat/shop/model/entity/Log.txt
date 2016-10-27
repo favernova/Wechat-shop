@@ -39,6 +39,12 @@ Log2016/10/21
 	`SEARCH_TERMS` mediumtext,
 	
 	这几项不懂什么意思。
+	
+--------------2016/10\27----------	
+1、怎么设置乐观锁的
+
+2、Validate.notBlank(paramName, "paramName cannot be null or empty");
+    这个是怎么用的？
 
 
  

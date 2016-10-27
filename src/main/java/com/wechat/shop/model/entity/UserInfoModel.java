@@ -31,8 +31,8 @@ public class UserInfoModel extends AbstractModel{
 	@Column(name = "ID", nullable = false, updatable = false)
 	int id;
 	
-	// @Column(name = "USER_ID")
-    // long orderId;
+	@Column(name = "USER_ID")
+    long orderId;
 	
 	@Column(name = "PHOTO")
     String photo;
