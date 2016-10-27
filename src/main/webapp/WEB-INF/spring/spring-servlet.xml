@@ -20,7 +20,19 @@
 
     <!-- 访问静态资源 -->
     <mvc:default-servlet-handler />
-    
+
+	 <mvc:interceptors>   
+	  <mvc:interceptor>   
+	    <mvc:mapping path="/**"/> 
+	    <mvc:exclude-mapping path="/login*"/>  
+	    <bean class="com.wechat.shop.annotations.impl.RequiresLoginInteceptor"></bean>   
+	  </mvc:interceptor>   
+	  <mvc:interceptor>   
+	    <mvc:mapping path="/**"/> 
+	    <mvc:exclude-mapping path="/login*"/>  
+	    <bean class="com.wechat.shop.annotations.impl.RequiresRecognizedUserInteceptor"></bean>   
+	  </mvc:interceptor>   
+	</mvc:interceptors>  
     <!-- 视图解析器 -->
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">

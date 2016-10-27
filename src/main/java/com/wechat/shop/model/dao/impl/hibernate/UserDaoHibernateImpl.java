@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,16 +37,16 @@ public class UserDaoHibernateImpl extends DaoHibernate<String, UserModel> implem
 	
 	@Override
 	@Transactional(readOnly = false)
-	public boolean verifyUser(String userName, String password) {
+	public UserModel verifyUser(String userName, String password) {
 		UserModel model = findByUserName(userName);
 		if(model != null && password != null){
 			if(password.equals(model.getPassword())){
 				model.setLastVisitedTime((new Date()).getTime());
 				this.save(model);
-				return true;
+				return model;
 			}
 		}
-		return false;
+		return null;
 	}
 
 }

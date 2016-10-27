@@ -5,5 +5,5 @@ import com.wechat.shop.model.entity.UserModel;
 public interface UserDao extends GenericDao<String, UserModel>{
 	UserModel findByUserName(String userName); 
 	
-	boolean verifyUser(String userName, String password);
+	UserModel verifyUser(String userName, String password);
 }
